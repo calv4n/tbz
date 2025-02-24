@@ -74,7 +74,7 @@ def admin_dashboard():
 
 #### 2. Unsichere Sitzungsverwaltung
 
-**Schwachstelle:**Ein Benutzer kann eine Sitzung mit sehbaren Tokens übernehmen.
+**Schwachstelle:** Ein Benutzer kann eine Sitzung mit sehbaren Tokens übernehmen.
 
 ```python
 import random
@@ -135,35 +135,35 @@ Security Misconfiguration ist eine der häufigsten Sicherheitslücken, die in mo
 
 Security Misconfiguration tritt auf, wenn Systeme und Anwendungen in einem unsicheren Zustand betrieben werden, der nicht den besten Sicherheitspraktiken entspricht. Dies kann durch Standard-Konfigurationen, unzureichend konfigurierte Firewalls oder falsche Rechtevergabe passieren. Einige der häufigsten Ursachen für Sicherheitsfehler sind:
 
-- **Verwendung von Standardkennwörtern und Standardkonfigurationen**: Viele Anwendungen oder Server werden mit voreingestellten Standardwerten ausgeliefert, die potenziell leicht zu erraten sind.
-- **Fehlende regelmässige Updates**: Systeme, die nicht regelmässig gepatcht oder aktualisiert werden, sind anfällig für bekannte Sicherheitslücken.
-- **Fehlende oder inkorrekte Zugriffskontrollen**: Wenn Zugriffsrechte nicht richtig konfiguriert sind, können unberechtigte Benutzer auf sensible Daten zugreifen.
-- **Unsichere Default-Einstellungen**: Beispielsweise werden einige Softwareprodukte mit unsicheren Standardeinstellungen ausgeliefert, die dann nicht nachträglich angepasst werden.
+- **Verwendung von Standardkennwörtern und Standardkonfigurationen:** Viele Anwendungen oder Server werden mit voreingestellten Standardwerten ausgeliefert, die potenziell leicht zu erraten sind.
+- **Fehlende regelmässige Updates:** Systeme, die nicht regelmässig gepatcht oder aktualisiert werden, sind anfällig für bekannte Sicherheitslücken.
+- **Fehlende oder inkorrekte Zugriffskontrollen:** Wenn Zugriffsrechte nicht richtig konfiguriert sind, können unberechtigte Benutzer auf sensible Daten zugreifen.
+- **Unsichere Default-Einstellungen:** Beispielsweise werden einige Softwareprodukte mit unsicheren Standardeinstellungen ausgeliefert, die dann nicht nachträglich angepasst werden.
 
 ### 3. Bedrohungen durch Security Misconfiguration
 
 Die Folgen einer fehlerhaften Konfiguration können schwerwiegende Sicherheitslücken öffnen, durch die Angreifer Zugriff auf Daten oder Systeme erhalten. Zu den typischen Bedrohungen gehören:
 
-- **Unberechtigter Zugriff**: Angreifer können durch unsichere Konfigurationen unbefugten Zugriff auf Datenbanken oder Server erhalten.
-- **Datenverlust oder -diebstahl**: Wenn sensible Daten wie Passwörter, persönliche Informationen oder Finanzdaten nicht ausreichend geschützt sind, können sie gestohlen oder manipuliert werden.
-- **Denial of Service (DoS)**: Eine unsichere Konfiguration kann dazu führen, dass Serveranfälligkeiten ausgenutzt werden, um den Dienst zu unterbrechen oder unzugänglich zu machen.
-- **Cross-Site Scripting (XSS) oder SQL Injection**: Fehlerhafte Konfigurationen können dazu führen, dass Sicherheitslücken in der Webanwendung entstehen, die für diese Angriffsarten anfällig sind.
+- **Unberechtigter Zugriff:** Angreifer können durch unsichere Konfigurationen unbefugten Zugriff auf Datenbanken oder Server erhalten.
+- **Datenverlust oder -diebstahl:** Wenn sensible Daten wie Passwörter, persönliche Informationen oder Finanzdaten nicht ausreichend geschützt sind, können sie gestohlen oder manipuliert werden.
+- **Denial of Service (DoS):** Eine unsichere Konfiguration kann dazu führen, dass Serveranfälligkeiten ausgenutzt werden, um den Dienst zu unterbrechen oder unzugänglich zu machen.
+- **Cross-Site Scripting (XSS) oder SQL Injection:** Fehlerhafte Konfigurationen können dazu führen, dass Sicherheitslücken in der Webanwendung entstehen, die für diese Angriffsarten anfällig sind.
 
 ### 4. Mögliche Folgen für Unternehmen
 
-- **Finanzielle Verluste**: Angreifer können durch das Ausnutzen von Security Misconfiguration direkt finanzielle Schäden verursachen, etwa durch Datenverlust oder betrügerische Transaktionen.
-- **Reputationsschäden**: Wenn vertrauliche Daten kompromittiert werden, kann das Vertrauen der Kunden in das Unternehmen erheblich beeinträchtigt werden.
-- **Rechtliche Konsequenzen**: Die Verletzung von Datenschutzbestimmungen, wie der DSGVO, kann zu rechtlichen Strafen führen, wenn Daten durch unsichere Konfigurationen entwendet werden.
+- **Finanzielle Verluste:** Angreifer können durch das Ausnutzen von Security Misconfiguration direkt finanzielle Schäden verursachen, etwa durch Datenverlust oder betrügerische Transaktionen.
+- **Reputationsschäden:** Wenn vertrauliche Daten kompromittiert werden, kann das Vertrauen der Kunden in das Unternehmen erheblich beeinträchtigt werden.
+- **Rechtliche Konsequenzen:** Die Verletzung von Datenschutzbestimmungen, wie der DSGVO, kann zu rechtlichen Strafen führen, wenn Daten durch unsichere Konfigurationen entwendet werden.
 
 ### 5. Präventionsmassnahmen
 
 Um Sicherheitsfehler durch fehlerhafte Konfiguration zu verhindern, sollten die folgenden Best Practices beachtet werden:
 
-- **Regelmässige Sicherheitsüberprüfungen**: Unternehmen sollten ihre Systeme regelmässig auf Sicherheitslücken hin überprüfen und alle Softwarekomponenten aktuell halten.
-- **Verwendung sicherer Konfigurationen**: Stelle sicher, dass alle Standardkennwörter geändert werden und sichere Konfigurationen genutzt werden.
-- **Minimierung der Angriffsfläche**: Nur die notwendigsten Dienste sollten aktiviert sein, und nicht benötigte Ports oder Dienste sollten deaktiviert werden.
-- **Zugriffssteuerung**: Implementiere eine strikte Zugriffskontrolle und stelle sicher, dass nur autorisierte Benutzer Zugriff auf sensitive Daten haben.
-- **Automatisierung von Sicherheitsprozessen**: Tools zur Automatisierung von Sicherheitsüberprüfungen und Konfigurationsänderungen können helfen, menschliche Fehler zu vermeiden.
+- **Regelmässige Sicherheitsüberprüfungen:** Unternehmen sollten ihre Systeme regelmässig auf Sicherheitslücken hin überprüfen und alle Softwarekomponenten aktuell halten.
+- **Verwendung sicherer Konfigurationen:** Stelle sicher, dass alle Standardkennwörter geändert werden und sichere Konfigurationen genutzt werden.
+- **Minimierung der Angriffsfläche:** Nur die notwendigsten Dienste sollten aktiviert sein, und nicht benötigte Ports oder Dienste sollten deaktiviert werden.
+- **Zugriffssteuerung:** Implementiere eine strikte Zugriffskontrolle und stelle sicher, dass nur autorisierte Benutzer Zugriff auf sensitive Daten haben.
+- **Automatisierung von Sicherheitsprozessen:** Tools zur Automatisierung von Sicherheitsüberprüfungen und Konfigurationsänderungen können helfen, menschliche Fehler zu vermeiden.
 
 ### 6. Fazit
 
