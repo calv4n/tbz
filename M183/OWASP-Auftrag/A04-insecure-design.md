@@ -13,7 +13,7 @@ CWE (Common Weakness Enumeration) ist eine Liste häufiger Softwareschwachstelle
 
 ### Überblick
 
-OWASP A04: Insecure Design beschreibt Sicherheitsrisiken, die durch unzureichende oder fehlerhafte Sicherheitsarchitektur und -prinzipien entstehen. Dies betrifft nicht nur einzelne Sicherheitslücken in der Implementierung, sondern grundlegende Design-Schwächen, die potenziell schwer zu beheben sind.
+OWASP A04 Insecure Design beschreibt Sicherheitsrisiken, die durch unzureichende oder fehlerhafte Sicherheitsarchitektur und -prinzipien entstehen. Dies betrifft nicht nur einzelne Sicherheitslücken in der Implementierung, sondern grundlegende Design-Schwächen, die potenziell schwer zu beheben sind.
 
 ### Theoretische Hintergründe und Bedrohung
 
