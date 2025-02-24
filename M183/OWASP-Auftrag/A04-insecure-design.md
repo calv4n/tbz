@@ -48,7 +48,7 @@ Insecure Design beschreibt Schwachstellen, die aus mangelhaftem Sicherheitsdenke
 
 #### 1. Fehlende Zugriffskontrolle
 
-**Schwachstelle:** Jeder Benutzer kann auf für die Admins geschützte Ressourcen zugreifen.
+##### **Schwachstelle:** Jeder Benutzer kann auf für die Admins geschützte Ressourcen zugreifen.
 
 ```python
 @app.route('/admin')
@@ -56,7 +56,7 @@ def admin_dashboard():
     return "Willkommen im Admin-Dashboard!"
 ```
 
-**Massnahme:** Implementierung von einer rollenbasierten Zugriffskontrolle 
+##### **Massnahme:** Implementierung von einer rollenbasierten Zugriffskontrolle 
 
 ```python
 from flask import Flask, request, abort
@@ -74,7 +74,7 @@ def admin_dashboard():
 
 #### 2. Unsichere Sitzungsverwaltung
 
-**Schwachstelle:** Ein Benutzer kann eine Sitzung mit sehbaren Tokens übernehmen.
+##### **Schwachstelle:** Ein Benutzer kann eine Sitzung mit sehbaren Tokens übernehmen.
 
 ```python
 import random
@@ -83,7 +83,7 @@ def generate_token():
     return str(random.randint(1000, 9999))
 ```
 
-**Massnahme:** Einen hex Token-Generator verwenden.
+##### **Massnahme:** Einen hex Token-Generator verwenden.
 
 ```python
 import secrets
@@ -94,7 +94,7 @@ def generate_token():
 
 #### 3. Fehlende Eingabevalidierung
 
-**Schwachstelle:** SQL-Injektion durch fehlende Eingabevalidierung und direkte SQL Abfragen ohne Validierung.
+##### **Schwachstelle:** SQL-Injektion durch fehlende Eingabevalidierung und direkte SQL Abfragen ohne Validierung.
 
 ```python
 import sqlite3
@@ -107,7 +107,7 @@ def get_user(username):
     return cursor.fetchall()
 ```
 
-**Massnahme:** Nutzung von vorbereiteter SQL-Statements zur Vermeidung von Injektions-Angriffen
+##### **Massnahme:** Nutzung von vorbereiteter SQL-Statements zur Vermeidung von Injektions-Angriffen
 
 ```python
 import sqlite3
