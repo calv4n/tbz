@@ -44,6 +44,85 @@ Insecure Design beschreibt Schwachstellen, die aus mangelhaftem Sicherheitsdenke
 - **Eskalation von Berechtigungen:** Angreifer könnten aufgrund von Designfehlern höhere Rechte erlangen als vorgesehen.
 - **Systemmanipulation:** Schwachstellen ermöglichen Angreifern, Systeme zu manipulieren oder zu übernehmen.
 
+### Schwachstellen im Code (Demo)
+
+#### 1. Fehlende Zugriffskontrolle
+
+**Schwachstelle:** Jeder Benutzer kann auf für die Admins geschützte Ressourcen zugreifen.
+
+```python
+@app.route('/admin')
+def admin_dashboard():
+    return "Willkommen im Admin-Dashboard!"
+```
+
+**Massnahme:** Implementierung von einer rollenbasierten Zugriffskontrolle 
+
+```python
+from flask import Flask, request, abort
+app = Flask(__name__)
+
+users = {"admin": "secret"}
+
+@app.route('/admin')
+def admin_dashboard():
+    auth = request.authorization
+    if not auth or users.get(auth.username) != auth.password:
+        abort(403)  # Zugriff verweigern
+    return "Willkommen im Admin-Dashboard!"
+```
+
+#### 2. Unsichere Sitzungsverwaltung
+
+**Schwachstelle:**Ein Benutzer kann eine Sitzung mit sehbaren Tokens übernehmen.
+
+```python
+import random
+
+def generate_token():
+    return str(random.randint(1000, 9999))
+```
+
+**Massnahme:** Einen hex Token-Generator verwenden.
+
+```python
+import secrets
+
+def generate_token():
+    return secrets.token_hex(32)
+```
+
+#### 3. Fehlende Eingabevalidierung
+
+**Schwachstelle:** SQL-Injektion durch fehlende Eingabevalidierung und direkte SQL Abfragen ohne Validierung.
+
+```python
+import sqlite3
+
+def get_user(username):
+    conn = sqlite3.connect("database.db")
+    cursor = conn.cursor()
+    query = f"SELECT * FROM users WHERE username = '{username}'"
+    cursor.execute(query)
+    return cursor.fetchall()
+```
+
+**Massnahme:** Nutzung von vorbereiteter SQL-Statements zur Vermeidung von Injektions-Angriffen
+
+```python
+import sqlite3
+
+def get_user(username):
+    conn = sqlite3.connect("database.db")
+    cursor = conn.cursor()
+    query = "SELECT * FROM users WHERE username = ?"
+    cursor.execute(query, (username,))
+    return cursor.fetchall()
+```
+
+### Fazit und Erkenntnisse
+
+- Ich habe erkannt, dass grundlegende Sicherheitsprobleme, oft schwer zu beheben oder zu finden sind, wenn sie nicht früh in der Entwicklung erwähnt werden. Deswegen ist es wichtig Sicherheitskonzepte, wie Bedrohungsmodellierung, Zugriffskontrollen, oder die Validierung von Eingaben von Beginn an zu integrieren.
 
 
 ## OWASP A05: Security Misconfiguration
