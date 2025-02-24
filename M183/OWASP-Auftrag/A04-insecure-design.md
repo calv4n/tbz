@@ -15,6 +15,37 @@ CWE (Common Weakness Enumeration) ist eine Liste häufiger Softwareschwachstelle
 
 OWASP A04: Insecure Design beschreibt Sicherheitsrisiken, die durch unzureichende oder fehlerhafte Sicherheitsarchitektur und -prinzipien entstehen. Dies betrifft nicht nur einzelne Sicherheitslücken in der Implementierung, sondern grundlegende Design-Schwächen, die potenziell schwer zu beheben sind.
 
+### Theoretische Hintergründe und Bedrohung
+
+#### Was ist Insecure Design genau?
+
+Insecure Design beschreibt Schwachstellen, die aus mangelhaftem Sicherheitsdenken in der Planungs- und Entwicklungsphase resultieren. Es unterscheidet sich von Implementierungsfehlern, da es nicht um einzelne Coding-Mängel geht, sondern um konzeptionelle Sicherheitslücken, die oft tief in der Architektur einer Anwendung verwurzelt sind. Eine Anwendung mit einem unsicheren Design kann auch dann angreifbar sein, wenn sie fehlerfrei implementiert wurde.
+
+#### Merkmale von Insecure Design
+
+- **Fehlende Sicherheitsanforderungen:** Sicherheitsmechanismen werden nicht von Anfang an in den Entwicklungsprozess integriert.
+- **Mangelnde Bedrohungsmodellierung:** Potenzielle Angriffsvektoren werden nicht ausreichend analysiert und berücksichtigt.
+- **Fehlende Sicherheitsprinzipien:** Grundlegende Prinzipien wie "Security by Design", "Least Privilege" oder "Defense in Depth" werden nicht angewendet.
+- **Unsichere Standardkonfigurationen:** Systeme und Anwendungen werden mit unsicheren Voreinstellungen ausgeliefert.
+- **Fehlende Mechanismen zur Schadensbegrenzung:** Selbst wenn eine Schwachstelle ausgenutzt wird, fehlen Maßnahmen, um die Auswirkungen zu minimieren.
+
+ #### Ursachen von Insecure Design
+
+- **Fehlende Sicherheitsrichtlinien:** Unternehmen oder Entwickler setzen keine klaren Sicherheitsanforderungen und -richtlinien um.
+- **Unzureichende Bedrohungsmodellierung:** Mangelhafte Analyse potenzieller Angriffsvektoren während der Designphase.
+- **Keine Prinzipien des sicheren Designs:** Keine Berücksichtigung von Sicherheitsprinzipien wie Least Privilege oder Defense in Depth.
+- **Fehlende Sicherheitsüberprüfungen:** Sicherheitsaspekte werden nicht in Code-Reviews oder Tests priorisiert.
+- **Zu hohe Komplexität:** Übermäßig komplexe Systeme mit schlecht dokumentierten Schnittstellen und Abhängigkeiten begünstigen Designfehler.
+
+#### Mögliche Folgen
+
+- **Unautorisierter Zugriff auf sensible Daten:** Schwachstellen im Design können Angreifern Zugriff auf geschützte Ressourcen gewähren.
+- **Umgehung von Sicherheitsmechanismen:** Unzureichend durchdachte Sicherheitsmaßnahmen können leicht ausgehebelt werden.
+- **Eskalation von Berechtigungen:** Angreifer könnten aufgrund von Designfehlern höhere Rechte erlangen als vorgesehen.
+- **Systemmanipulation:** Schwachstellen ermöglichen Angreifern, Systeme zu manipulieren oder zu übernehmen.
+
+
+
 ## OWASP A05: Security Misconfiguration
 
 ### 1. Einleitung
