@@ -23,26 +23,30 @@ Insecure Design beschreibt Schwachstellen, die aus mangelhaftem Sicherheitsdenke
 
 #### Merkmale von Insecure Design
 
-- **Fehlende Sicherheitsanforderungen:** Sicherheitsmechanismen werden nicht von Anfang an in den Entwicklungsprozess integriert.
-- **Mangelnde Bedrohungsmodellierung:** Potenzielle Angriffsvektoren werden nicht ausreichend analysiert und berücksichtigt.
-- **Fehlende Sicherheitsprinzipien:** Grundlegende Prinzipien wie "Security by Design", "Least Privilege" oder "Defense in Depth" werden nicht angewendet.
-- **Unsichere Standardkonfigurationen:** Systeme und Anwendungen werden mit unsicheren Voreinstellungen ausgeliefert.
-- **Fehlende Mechanismen zur Schadensbegrenzung:** Selbst wenn eine Schwachstelle ausgenutzt wird, fehlen Maßnahmen, um die Auswirkungen zu minimieren.
+- **Fehlende Sicherheitsanforderungen**: Viele Entwickler konzentrieren sich auf die Funktionalität einer Anwendung und vernachlässigen Sicherheitsmechanismen. Wenn Sicherheitsanforderungen nicht von Anfang an definiert werden, entstehen Lücken, die später schwer zu schließen sind.
+- **Mangelnde Bedrohungsmodellierung**: Bedrohungsmodellierung hilft, Schwachstellen frühzeitig zu identifizieren. Ohne eine systematische Analyse potenzieller Angriffsvektoren bleiben viele Risiken unerkannt.- **Fehlende Sicherheitsprinzipien:** Grundlegende Prinzipien wie "Security by Design", "Least Privilege" oder "Defense in Depth" werden nicht angewendet.
+- **Fehlende Sicherheitsprinzipien**:
+   - **Security by Design**: Sicherheitsmassnahmen sollten von Beginn an Teil der Architektur sein.
+   - **Least Privilege**: Jeder Benutzer oder Prozess sollte nur die minimal notwendigen Rechte haben.
+   - **Defense in Depth**: Mehrere Schutzschichten reduzieren die Wahrscheinlichkeit eines erfolgreichen Angriffs.
+- **Unsichere Standardkonfigurationen**: Viele Systeme werden mit Standardeinstellungen ausgeliefert, die nicht sicher sind. Beispiel: Standardpasswörter oder unsichere API-Endpunkte.
+- **Fehlende Mechanismen zur Schadensbegrenzung**: Falls ein Angreifer eine Schwachstelle ausnutzt, sollten Mechanismen existieren, um den Schaden zu minimieren, z. B. durch Intrusion Detection oder Zugriffsbeschränkungen.
 
  #### Ursachen von Insecure Design
 
-- **Fehlende Sicherheitsrichtlinien:** Unternehmen oder Entwickler setzen keine klaren Sicherheitsanforderungen und -richtlinien um.
-- **Unzureichende Bedrohungsmodellierung:** Mangelhafte Analyse potenzieller Angriffsvektoren während der Designphase.
-- **Keine Prinzipien des sicheren Designs:** Keine Berücksichtigung von Sicherheitsprinzipien wie Least Privilege oder Defense in Depth.
-- **Fehlende Sicherheitsüberprüfungen:** Sicherheitsaspekte werden nicht in Code-Reviews oder Tests priorisiert.
-- **Zu hohe Komplexität:** Übermäßig komplexe Systeme mit schlecht dokumentierten Schnittstellen und Abhängigkeiten begünstigen Designfehler.
+- **Fehlende Sicherheitsrichtlinien**: Unternehmen haben oft keine klar definierten Sicherheitsanforderungen, wodurch Entwickler ohne Leitlinien arbeiten.
+- **Unzureichende Bedrohungsmodellierung**: Ohne eine gründliche Analyse potenzieller Bedrohungen werden viele Angriffsvektoren übersehen.
+- **Mangelnde Schulung von Entwicklern**: Entwickler ohne tiefes Wissen über sichere Programmierung begehen häufig Fehler, die vermeidbar wären.
+- **Fehlende Sicherheitsüberprüfungen**: Sicherheitsrelevante Funktionen werden oft nicht in Code Reviews, Tests oder Penetrationstests geprüft.
+- **Zu hohe Komplexität**: Übermäßig komplexe Systeme mit schlecht dokumentierten Schnittstellen und Abhängigkeiten begünstigen Designfehler, die von Angreifern ausgenutzt werden können.
 
 #### Mögliche Folgen
 
-- **Unautorisierter Zugriff auf sensible Daten:** Schwachstellen im Design können Angreifern Zugriff auf geschützte Ressourcen gewähren.
-- **Umgehung von Sicherheitsmechanismen:** Unzureichend durchdachte Sicherheitsmaßnahmen können leicht ausgehebelt werden.
-- **Eskalation von Berechtigungen:** Angreifer könnten aufgrund von Designfehlern höhere Rechte erlangen als vorgesehen.
-- **Systemmanipulation:** Schwachstellen ermöglichen Angreifern, Systeme zu manipulieren oder zu übernehmen.
+- **Unautorisierter Zugriff auf sensible Daten**: Schwachstellen im Design können dazu führen, dass Angreifer Zugriff auf vertrauliche Informationen wie Kundendaten oder Finanzdaten erhalten.
+- **Umgehung von Sicherheitsmechanismen**: Wenn Sicherheit nur oberflächlich implementiert wurde, können Angreifer Schutzmassnahmen leicht umgehen.
+- **Eskalation von Berechtigungen**: Designfehler können es Angreifern ermöglichen, sich höhere Berechtigungen zu verschaffen, um so tiefere Systemzugriffe zu erhalten.
+- **Systemmanipulation**: Unzureichend abgesicherte Systeme können von Angreifern übernommen, manipuliert oder sogar für weitere Angriffe missbraucht werden.
+- **Reputationsverlust und rechtliche Konsequenzen**: Unternehmen, die von Sicherheitslücken betroffen sind, verlieren das Vertrauen ihrer Kunden und können rechtliche Probleme bekommen.
 
 ### Schwachstellen im Code (Demo)
 
