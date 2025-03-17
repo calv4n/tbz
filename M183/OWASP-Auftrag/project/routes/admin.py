@@ -12,3 +12,6 @@ def admin_dashboard():
     if not auth or users.get(auth.username) != auth.password:
         abort(403)
     return "Admin Dashboard"
+
+# curl -u admin:secret -L http://localhost:5000/admin
+
