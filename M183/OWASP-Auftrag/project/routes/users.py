@@ -17,3 +17,5 @@ def get_user(username):
     query = "SELECT * FROM users WHERE username = ?"
     cursor.execute(query, (username,))
     return {"user": cursor.fetchall()}
+
+# curl "http://localhost:5000/get-user-secure?username=admin' OR 1=1 --"
