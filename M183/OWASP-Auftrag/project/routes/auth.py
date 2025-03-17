@@ -11,3 +11,5 @@ def generate_token():
 print(generate_token())
 
 # http://127.0.0.1:5000/auth/generate_token
+
+# curl -X GET http://localhost:5000/admin/ -H "Authorization: Bearer 48d1f4bafd08469791a6d04ea45133d43216003c9279f8baeb5cd3f723f5974d"
