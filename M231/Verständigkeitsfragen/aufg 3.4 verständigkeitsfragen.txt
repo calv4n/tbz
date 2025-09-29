@@ -1,0 +1,9 @@
+verständigkeitsfragen
+
+- Was bedeutet die Abkürzung DVCS?
+- Wie heisst das bekannteste DVCS System?
+- Was ist der Unterschied zwischen einer zentralisierten und einer dezentralisierten Versionsverwaltung?
+- Was bedeutet in diesem Zusammenhang die Abkürzung "MD"?- 
+- Weshalb ist "MD" in Zusammenspiel mit DVCS so nützlich?
+- Was ist wesentlich umfangreicher wie "MD" und wird sehr gerne für wissenschaftliche Arbeiten verwendet (z.B. Ihre zukünftige Bachelorarbeit an einer Hochschule)?
+- Weshalb ist der Einsatz von docx Dateien mit dem bekanntesten DVCS System problematisch?

@@ -1,0 +1,7 @@
+BEFEHLE
+
+crontab -> minute (0-59), stunde(0-23), tag des monats(1-31), monat(1-12), tag der woche(0-6) (Sunday = 0).
+
+Brace Expansion -> {} man kann zu etwas anbinden. {a}file = afile. {a..c} = a b c. (".." Bereichsoperator, erzeugt Liste von aufeinanderfolgenden Werten.)
+
+

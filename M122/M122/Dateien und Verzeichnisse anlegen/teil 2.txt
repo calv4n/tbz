@@ -1,0 +1,14 @@
+klasse=$(echo M122-AP22b.txt | cut -d'.' -f1)
+
+mkdir $klasse
+
+names=($(cat M122-AP22b.txt))
+
+for name in "${names[@]}"
+do
+	mkdir $klasse/$name
+	ls
+done
+
+rm -r Template/
+

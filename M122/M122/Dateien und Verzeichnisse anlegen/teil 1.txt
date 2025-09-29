@@ -1,0 +1,17 @@
+cd
+
+names=("Amherd" "Baume-Schneider" "Berset" "Cassis" "Keller-Sutter" "Parmelin" "Roesti")
+
+echo "${names[@]}" > M122-AP22b.txt
+
+
+mkdir Template
+
+cd Template
+
+touch Datei-1.txt
+touch Datei-2.docx
+touch Datei-3.pdf
+
+
+

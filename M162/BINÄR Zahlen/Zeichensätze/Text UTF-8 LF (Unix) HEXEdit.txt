@@ -1,0 +1,5 @@
+Dies ist ein Text mit Umlauten Ä Ö Ü ä ö ü
+Auch Sonderzechen gibt es: + " * ç % ~ √ µ € ∆ º ° §
+Die Zeilenenden (LF) sind interessant:
+
+ 
